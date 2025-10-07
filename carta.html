@@ -1,0 +1,124 @@
+  <!doctype html>
+  <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carta para Neyda 💌</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffe6eb, #fff5f7);
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .carta {
+        position: relative;
+        width: 350px;
+        height: 250px;
+        perspective: 1000px;
+        cursor: pointer;
+      }
+
+      .carta .cara {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 1s;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      }
+
+      .carta .frente {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(0deg);
+      }
+
+      .carta .frente img {
+        width: 230px;
+        height: auto;
+        border-radius: 10px;
+        opacity: 0.95;
+        transition: opacity 0.3s;
+      }
+
+      .carta:hover .frente img {
+        opacity: 1;
+      }
+
+      .carta .atras {
+        background: white;
+        transform: rotateY(180deg);
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .carta .atras h1 {
+        color: #ff4f77;
+        margin-bottom: 5px;
+      }
+
+      .fecha {
+        font-size: 0.9em;
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      .carta .atras p {
+        color: #444;
+        line-height: 1.4em;
+      }
+
+      .firma {
+        margin-top: 20px;
+        color: #ff4f77;
+        font-weight: bold;
+      }
+
+      .abierta .frente {
+        transform: rotateY(180deg);
+      }
+
+      .abierta .atras {
+        transform: rotateY(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carta" id="carta">
+      <div class="cara frente">
+        <img src="img/corazon.jpg" alt="Carta de amor">
+      </div>
+      <div class="cara atras">
+        <h1>Para Neyda ❤️</h1>
+        <div class="fecha">Desde el 27 de octubre</div>
+        <p>
+          Mi amor, desde que llegaste a mi vida todo cambió.  
+          Cada momento contigo se ha vuelto un recuerdo precioso,  
+          y cada sonrisa tuya ilumina mis días.  
+          Eres mi razón para sonreír, mi paz y mi felicidad.  
+          No hay palabras suficientes para expresar cuánto te amo,  
+          pero quiero que sepas que mi corazón es solo tuyo. 💞  
+          Te amo, carachita 💞💞💞
+        </p>
+        <div class="firma">Con amor, Ebelio tu Rey💕</div>
+      </div>
+    </div>
+
+    <script>
+      const carta = document.getElementById('carta');
+      carta.addEventListener('click', () => {
+        carta.classList.toggle('abierta');
+      });
+    </script>
+  </body>
+  </html>
