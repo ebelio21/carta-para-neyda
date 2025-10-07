@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #ffe6eb, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.contenedor {
+  position: relative;
+  text-align: center;
+}
+
+.carta-img {
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.carta-img:hover {
+  transform: scale(1.05);
+}
+
+.desaparecer {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.tarjeta {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.oculto {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.corazon {
+  font-size: 30px;
+  color: #e85b81;
+}
+
+h1 {
+  color: #e85b81;
+  margin-bottom: 5px;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+article {
+  line-height: 1.7;
+  font-size: 18px;
+  color: #333;
+}
+
+.firma {
+  text-align: right;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #e85b81;
+}
